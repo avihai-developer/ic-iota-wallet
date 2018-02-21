@@ -1,0 +1,30 @@
+.page-model-receive {
+	padding: 16px;
+	.create-btn {
+		background-color: $color-primary;
+		color: white;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		.text {
+			display: inline-block;
+		}
+	}
+	.address {
+		color: $color-text;
+		.id {
+			word-break: break-all;
+			text-align: center;
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+		.qr-canvas {
+			right: 0;
+			left: 0;
+			display: block;
+			margin: 0 auto;
+			min-width: 300px;
+			min-height: 300px;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+{
+  "name": "iota-community-wallet-app",
+  "version": "0.0.6",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://avihai_ubuntu@bitbucket.org/avihai_ubuntu/iota-community-wallet-app.git"
+  },
+  "author": "Avihai Cohen",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.8",
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "angular-aria": "^1.6.6",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.6",
+    "browser-sync": "^2.18.13",
+    "cordova-android": "^7.0.0",
+    "cordova-ios": "4.5.4",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-qrscanner": "^2.5.0",
+    "cordova-plugin-splashscreen": "^5.0.1",
+    "cordova-plugin-statusbar": "^2.4.1",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "dotenv": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-multi-process": "^1.3.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "html2canvas": "^1.0.0-alpha.8",
+    "iota.lib.js": "^0.4.6",
+    "jquery": "^3.3.1",
+    "jquery-ui-dist": "^1.12.1",
+    "pug": "^2.0.0-rc.4",
+    "qrcode": "^1.2.0",
+    "simple-plist": "^0.2.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-compat": {},
+      "cordova-plugin-qrscanner": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

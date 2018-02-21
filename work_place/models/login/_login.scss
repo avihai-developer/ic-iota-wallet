@@ -1,0 +1,98 @@
+.page-model-login {
+	padding-top: 10vw;
+	.text {
+		width: 76vw;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 10vw;
+	}
+	.seed-input {
+		width: 76vw;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		display: block;
+		color: $color-accent;
+		height: 12vw;
+		line-height: 12vw;
+		margin-bottom: 8vw;
+		.text {
+			display: inline-block;
+			width: 60vw;
+			background-color: rgba(0, 0, 0, 0.15);
+			text-align: center;
+		}
+		.qr {
+			text-align: center;
+			float: right;
+			height: 12vw;
+			width: 12vw;
+			display: inline-block;
+			background-color: rgba(0, 0, 0, 0.15);
+			border-radius: 15%;
+			i {
+				font-size: 10vw;
+				padding-top: 1.4vw;
+			}
+		}
+	}
+	.seed-btns {
+		width: 80vw;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		.line {
+			.seed-btn {
+				font-weight: bold;
+				display: inline-block;
+				width: 12vw;
+				height: 12vw;
+				line-height: 12vw;
+				margin: 2vw;
+				text-align: center;
+				color: $color-accent;
+				background-color: rgba(0, 0, 0, 0.15);
+				border-radius: 15%;
+			}
+		}
+		.line.last {
+			padding-left: 24vw;
+			padding-right: 24vw;
+		}
+	}
+	.qr {
+		.header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 50px;
+			color: white;
+			background-color: rgba(0, 0, 0, 0.5);
+			.back {
+				float: left;
+				width: 50px;
+				text-align: center;
+				i {
+					line-height: 50px;
+				}
+			}
+			.text {
+				line-height: 50px;
+			}
+		}
+		.scan-box {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 50vw;
+			height: 50vw;
+			border: 8px solid white;
+			border-color: rgba(255, 255, 255, 0.5);
+			transform: translate(-50%, -50%);
+		}
+	}
+}

@@ -1,0 +1,61 @@
+.page-model-transfers {
+	overflow-y: auto;
+	overflow-x: hidden;
+	.no-transfers {
+		text-align: center;
+		line-height: 100px;
+	}
+	.transfers-box {
+		.transfer {
+			position: relative;
+			border-top: 1px solid $color-gray;
+			height: 70px;
+			.type-icon {
+				line-height: 70px;
+				margin-left: 19px;
+				color: rgba(0, 0, 0, 0.54);
+				width: 20px;
+				text-align: center;
+			}
+			.amount {
+				position: absolute;
+				top: 0;
+				left: 58px;
+				line-height: 48px;
+				color: rgba(0, 0, 0, 0.87);
+			}
+			.date {
+				position: absolute;
+				bottom: 0;
+				left: 58px;
+				line-height: 48px;
+				color: rgba(0, 0, 0, 0.87);
+				font-size: 13px;
+			}
+			.fa-check {
+				position: absolute;
+				line-height: 70px;
+				right: 19px;
+				color: rgba(0, 0, 0, 0.54);
+				width: 20px;
+				text-align: center;
+			}
+			.in-progress {
+				position: absolute;
+				right: 19px;
+				top: 25px;
+				width: 20px;
+				height: 20px;
+				-webkit-animation: rotation 2s infinite linear;
+			}
+			.new-address {
+				line-height: 70px;
+				width: 100%;
+				text-align: center;
+			}
+			&:last-of-type {
+				border-bottom: 1px solid $color-gray;
+			}
+		}
+	}
+}

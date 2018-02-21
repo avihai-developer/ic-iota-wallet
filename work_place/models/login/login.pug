@@ -1,0 +1,49 @@
+.page-model.page-model-login(ng-class='md.mode === "qr" ? "transparent" : ""')
+	.type(ng-show='md.mode === "type"')
+		.text Enter your seed or create one randomly
+		.seed-input
+			.text {{md.seed.length}} / 81
+			.qr(ng-click="scan()")
+				i.fa.fa-qrcode(aria-hidden='true')
+		.seed-btns
+			.line
+				.seed-btn(ng-click='addChar("A")') A
+				.seed-btn(ng-click='addChar("B")') B
+				.seed-btn(ng-click='addChar("C")') C
+				.seed-btn(ng-click='addChar("D")') D
+				.seed-btn(ng-click='addChar("E")') E
+			.line
+				.seed-btn(ng-click='addChar("F")') F
+				.seed-btn(ng-click='addChar("G")') G
+				.seed-btn(ng-click='addChar("H")') H
+				.seed-btn(ng-click='addChar("I")') I
+				.seed-btn(ng-click='addChar("J")') J
+			.line
+				.seed-btn(ng-click='addChar("K")') K
+				.seed-btn(ng-click='addChar("L")') L
+				.seed-btn(ng-click='addChar("M")') M
+				.seed-btn(ng-click='addChar("N")') N
+				.seed-btn(ng-click='addChar("O")') O
+			.line
+				.seed-btn(ng-click='addChar("P")') P
+				.seed-btn(ng-click='addChar("Q")') Q
+				.seed-btn(ng-click='addChar("R")') R
+				.seed-btn(ng-click='addChar("S")') S
+				.seed-btn(ng-click='addChar("T")') T
+			.line
+				.seed-btn(ng-click='addChar("U")') U
+				.seed-btn(ng-click='addChar("V")') V
+				.seed-btn(ng-click='addChar("W")') W
+				.seed-btn(ng-click='addChar("X")') X
+				.seed-btn(ng-click='addChar("Y")') Y
+			.line.last
+				.seed-btn(ng-click='addChar("Z")') Z
+				.seed-btn(ng-click='addChar("9")') 9
+	.qr(ng-show='md.mode === "qr"')
+		.header
+			.back(ng-click='closeQrScan()')
+				i.fa.fa-arrow-left(aria-hidden='true')
+			.text Scan your seed
+		.scan-box
+		.close
+

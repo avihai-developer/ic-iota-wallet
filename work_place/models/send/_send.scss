@@ -1,0 +1,84 @@
+.page-model-send {
+	padding: 16px;
+	.address {
+		position: relative;
+		margin-bottom: 16px;
+		.fa-qrcode {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background-color: $color-primary;
+			color: white;
+			font-size: 25px;
+			line-height: 53px;
+		}
+	}
+	.amount {
+		margin-bottom: 20px;
+		position: relative;
+		.unit {
+			position: absolute;
+			display: block;
+			right: 0;
+			bottom: 0;
+			height: 50px;
+			line-height: 50px;
+			width: 50px;
+			content: 'Mi';
+			text-align: center;
+			background-color: $color-primary;
+			color: white;
+		}
+		input {
+		}
+		.units {
+			display: none;
+			position: absolute;
+			right: 0;
+			top: 72px;
+			height: 300px;
+			background-color: $color-primary;
+			-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+			.opt {
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				background-color: $color-primary;
+				color: white;
+				width: 100%;
+				padding-right: 16px;
+				padding-left: 16px;
+				box-sizing: border-box;
+			}
+		}
+	}
+	.send-btn {
+		background-color: $color-primary;
+		color: white;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		.text {
+			display: inline-block;
+		}
+	}
+	.label {
+		color: $color-primary;
+		font-weight: bold;
+		margin-bottom: 4px;
+	}
+	input {
+		border: 1px solid $color-primary;
+		height: 50px;
+		line-height: 50px;
+		width: 100%;
+		padding-left: 16px;
+		padding-right: 66px;
+	}
+}

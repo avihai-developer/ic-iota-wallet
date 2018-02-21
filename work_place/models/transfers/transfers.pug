@@ -1,0 +1,21 @@
+.page-inner-model.page-model-transfers
+	.transfers-box
+		.no-transfers(ng-if='md.transfersView.length === 0') No transfers
+		.transfer(ng-repeat='transfer in md.transfersView | orderBy: "-date"', ng-if='transfer.show')
+			.sent(ng-if='transfer.amount < 0')
+				i.type-icon.fa.fa-paper-plane
+				.amount - {{transfer.amount * -1}} Mi
+				.date {{transfer.date | date: 'dd/MM/yyyy HH:mm'}}
+				i.fa.fa-check(aria-hidden='true', ng-if='transfer.isConfirm')
+				img.in-progress(src='./images/iota-logo-gray.svg', ng-show='!transfer.isConfirm')
+			.recive(ng-if='transfer.amount > 0')
+				i.type-icon.fa.fa-download
+				.amount + {{transfer.amount}} Mi
+				.date {{transfer.date | date: 'dd/MM/yyyy HH:mm'}}
+				i.fa.fa-check(aria-hidden='true', ng-if='transfer.isConfirm')
+				img.in-progress(src='./images/iota-logo-gray.svg', ng-show='!transfer.isConfirm')
+			.new-wallet(ng-if='transfer.amount === 0')
+				i.type-icon.fa.fa-qrcode
+				.amount New Address
+				.date {{transfer.date | date: 'dd/MM/yyyy HH:mm'}}
+				i.fa.fa-check(aria-hidden='true')

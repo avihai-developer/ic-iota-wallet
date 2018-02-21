@@ -1,0 +1,65 @@
+// fonts
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('./fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+	url('./fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+	url('./fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+	url('./fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+	url('./fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Colors
+$color-primary : #00695C;
+$color-accent : #FAFAFA;
+$color-text : black;
+$color-gray : rgba(0, 0, 0, 0.1);
+
+* {
+	outline: none !important;
+}
+body {
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	.page-model {
+		background-color: $color-primary;
+		width: 100vw;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+	.inner-view {
+		position: absolute;
+		top: 112px;
+		left: 0;
+		width: 100vw;
+		height: calc(100vh - 112px);
+	}
+	.page-inner-model {
+		position: fixed;
+		width: 100%;
+		height: calc(100vh - 112px);
+		color: $color-text;
+		box-sizing: border-box;
+	}
+	.transparent {
+		background-color: transparent;
+	}
+}
+
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+// imports
+@import "../layout/layout";
+@import "../login/login";
+@import "../receive/receive";
+@import "../send/send";
+@import "../transfers/transfers";
