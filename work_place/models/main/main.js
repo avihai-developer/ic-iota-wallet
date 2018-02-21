@@ -1,5 +1,5 @@
 // var iota = new IOTA({'provider': 'http://node.lukaseder.de:14265'});
-var iota = new IOTA({'provider': 'http://node.iota-community.org'});
+var iota = new IOTA({'provider': 'https://node.iota-community.org'});
 iota.api.getNodeInfo(function(error, success) {
 	if (error) {
 		console.error('getNodeInfo error', error);
