@@ -1,0 +1,21 @@
+========================================================================================================================
+Title:
+IC IOTA Wallet
+========================================================================================================================
+Short description:
+Store, send and receive iota via IC IOTA Wallet
+========================================================================================================================
+Full description:
+Open source iota wallet developed by the iota community.
+
+• Create your seed manualy - the most secure way
+• Send iota
+• Recive iota
+• Scan address via QR code
+
+Github:
+https://github.com/avihai-developer/ic-iota-wallet
+
+Donate:
+JJ9XSNKALKGZGZGZKZLIENEXPYFGCZQOHRXBYWRXRNUIWGJIDRBFRYGCFEAEKCSRNOYCQP9HFZDFKOWZDFDFOFVFGW
+========================================================================================================================
