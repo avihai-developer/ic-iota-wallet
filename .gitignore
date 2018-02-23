@@ -3,5 +3,6 @@ node_modules/
 platforms/
 plugins/
 work_place/temp/
+www/
 package-lock.json
 *.apk
