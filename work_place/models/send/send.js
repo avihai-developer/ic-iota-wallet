@@ -113,6 +113,7 @@ function SendController($scope, $http, $state, $timeout, $rootScope) {
 				console.log(msg.data.success);
 				$rootScope.loader(false);
 				$rootScope.showPopup('Your transaction has been sent successfully.');
+				$rootScope.loadWalletData();
 			}
 		};
 	}

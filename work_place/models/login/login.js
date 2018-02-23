@@ -12,16 +12,6 @@ function LoginController($scope, $http, $state, $timeout, $rootScope) {
 		// mode: 'qr',
 		seed: ''
 	};
-	$scope.addChar = function(char) {
-		if($scope.md.seed.length + 1 <= 81) {
-			$scope.md.seed+=char;
-		}
-		if($scope.md.seed.length === 81) {
-			localStorage.setItem('seed', $scope.md.seed);
-			$rootScope.seed = $scope.md.seed;
-			$state.go('layout.transfers');
-		}
-	};
 	$scope.scan = function () {
 		QRScanner.prepare(function (err, status) {
 			if(err) return;
@@ -56,5 +46,29 @@ function LoginController($scope, $http, $state, $timeout, $rootScope) {
 				$scope.md.mode = 'type';
 			}, 1);
 		});
+	};
+	$scope.onType = function () {
+		if($scope.md.seed.length === 81) {
+			$scope.md.seed = $scope.md.seed.toUpperCase();
+			localStorage.setItem('seed', $scope.md.seed);
+			$rootScope.seed = $scope.md.seed;
+			$state.go('layout.transfers');
+		}
+	};
+	$scope.generateSeed = function () {
+		var final_seed = '';
+		var random_array = new Uint32Array(1);
+		var created_chars = 0;
+		while (created_chars < 81) {
+			window.crypto.getRandomValues(random_array);
+			random_array[0] = (random_array[0] % 33) + 57;
+			if ((random_array[0] >= 65 && random_array[0] <= 90) || random_array[0] == 57) {
+				final_seed += String.fromCharCode(random_array[0]);
+				created_chars += 1;
+			}
+		}
+		localStorage.setItem('seed', final_seed);
+		$rootScope.seed = final_seed;
+		$state.go('layout.transfers');
 	};
 }

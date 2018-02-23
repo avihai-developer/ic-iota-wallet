@@ -1,44 +1,14 @@
 .page-model.page-model-login(ng-class='md.mode === "qr" ? "transparent" : ""')
 	.type(ng-show='md.mode === "type"')
-		.text Enter your seed or create one randomly
+		.text SEED
 		.seed-input
-			.text {{md.seed.length}} / 81
-			.qr(ng-click="scan()")
-				i.fa.fa-qrcode(aria-hidden='true')
-		.seed-btns
-			.line
-				.seed-btn(ng-click='addChar("A")') A
-				.seed-btn(ng-click='addChar("B")') B
-				.seed-btn(ng-click='addChar("C")') C
-				.seed-btn(ng-click='addChar("D")') D
-				.seed-btn(ng-click='addChar("E")') E
-			.line
-				.seed-btn(ng-click='addChar("F")') F
-				.seed-btn(ng-click='addChar("G")') G
-				.seed-btn(ng-click='addChar("H")') H
-				.seed-btn(ng-click='addChar("I")') I
-				.seed-btn(ng-click='addChar("J")') J
-			.line
-				.seed-btn(ng-click='addChar("K")') K
-				.seed-btn(ng-click='addChar("L")') L
-				.seed-btn(ng-click='addChar("M")') M
-				.seed-btn(ng-click='addChar("N")') N
-				.seed-btn(ng-click='addChar("O")') O
-			.line
-				.seed-btn(ng-click='addChar("P")') P
-				.seed-btn(ng-click='addChar("Q")') Q
-				.seed-btn(ng-click='addChar("R")') R
-				.seed-btn(ng-click='addChar("S")') S
-				.seed-btn(ng-click='addChar("T")') T
-			.line
-				.seed-btn(ng-click='addChar("U")') U
-				.seed-btn(ng-click='addChar("V")') V
-				.seed-btn(ng-click='addChar("W")') W
-				.seed-btn(ng-click='addChar("X")') X
-				.seed-btn(ng-click='addChar("Y")') Y
-			.line.last
-				.seed-btn(ng-click='addChar("Z")') Z
-				.seed-btn(ng-click='addChar("9")') 9
+			.label Your seed ({{md.seed.length}} / 81)
+			input(ng-model='md.seed', ng-change='onType()', placeholder='A-Z and the number 9', maxlength='81')
+			i.fa.fa-qrcode(aria-hidden='true', ng-click='scan()')
+		.generate(ng-click="generateSeed()")
+			.generate-text Generate new seed
+		.about Think about your seed as the combined username and password that grants access to your bank account. If anyone obtains your seed, they can login and access your funds. If you lost your seed you lost your founds.
+		.generate-manualy You can create new seed manually, just randomly press A-Z, 9.
 	.qr(ng-show='md.mode === "qr"')
 		.header
 			.back(ng-click='closeQrScan()')

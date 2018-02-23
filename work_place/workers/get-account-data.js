@@ -3,9 +3,16 @@ onmessage = function(seed) {
 	// var iota = new self.IOTA({'provider': 'http://node.lukaseder.de:14265'});
 	var iota = new self.IOTA({'provider': 'https://node.iota-community.org'});
 	iota.api.getAccountData(seed.data, function(error, success) {
-		postMessage({
-			error: error,
-			success: success
-		});
+		try {
+			postMessage({
+				error: error,
+				success: success
+			});
+		} catch (error) {
+			postMessage({
+				error: 'Error',
+				success: success
+			});
+		}
 	});
 };

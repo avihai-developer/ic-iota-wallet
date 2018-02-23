@@ -1,66 +1,75 @@
 .page-model-login {
-	padding-top: 10vw;
-	.text {
-		width: 76vw;
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-		text-align: center;
-		font-weight: bold;
-		margin-bottom: 10vw;
-	}
-	.seed-input {
-		width: 76vw;
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-		display: block;
-		color: $color-accent;
-		height: 12vw;
-		line-height: 12vw;
-		margin-bottom: 8vw;
+	.type {
+		position: relative;
+		//padding: 16px;
+		padding-right: 16px;
+		padding-left: 16px;
+		background-color: white !important;
+		min-height: 100vh;
 		.text {
-			display: inline-block;
-			width: 60vw;
-			background-color: rgba(0, 0, 0, 0.15);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: $color-primary;
 			text-align: center;
+			height: 112px;
+			line-height: 112px;
+			font-weight: bold;
 		}
-		.qr {
-			text-align: center;
-			float: right;
-			height: 12vw;
-			width: 12vw;
-			display: inline-block;
-			background-color: rgba(0, 0, 0, 0.15);
-			border-radius: 15%;
-			i {
-				font-size: 10vw;
-				padding-top: 1.4vw;
-			}
-		}
-	}
-	.seed-btns {
-		width: 80vw;
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-		.line {
-			.seed-btn {
+		.seed-input {
+			padding-top: 128px;
+			position: relative;
+			margin-bottom: 16px;
+			.label {
+				color: $color-primary;
 				font-weight: bold;
-				display: inline-block;
-				width: 12vw;
-				height: 12vw;
-				line-height: 12vw;
-				margin: 2vw;
+				margin-bottom: 4px;
+			}
+			.fa-qrcode {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
 				text-align: center;
-				color: $color-accent;
-				background-color: rgba(0, 0, 0, 0.15);
-				border-radius: 15%;
+				background-color: $color-primary;
+				color: white;
+				font-size: 25px;
+				line-height: 53px;
+			}
+			input {
+				border: 1px solid $color-primary;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				padding-left: 16px;
+				padding-right: 66px;
+				text-transform:uppercase;
+				&::placeholder {
+					text-transform:initial;
+				}
 			}
 		}
-		.line.last {
-			padding-left: 24vw;
-			padding-right: 24vw;
+		.generate {
+			background-color: $color-primary;
+			color: white;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			margin-bottom: 16px;
+			.generate-text {
+				display: inline-block;
+			}
+		}
+		.about {
+			color: black;
+			margin-bottom: 16px;
+		}
+		.generate-manualy {
+			color: black;
+			font-weight: bold;
 		}
 	}
 	.qr {

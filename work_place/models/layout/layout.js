@@ -9,7 +9,7 @@ function LayoutController($scope, $http, $state, $timeout, $rootScope, $mdSidena
 			navigator.splashscreen.hide();
 		}
 	}, 1000);
-	$scope.loadWalletData = function () {
+	$rootScope.loadWalletData = function () {
 		var lastSync = localStorage.getItem('lastSync');
 		if(lastSync && (new Date().getTime() - 3000 < lastSync)) {
 		} else {
@@ -29,7 +29,9 @@ function LayoutController($scope, $http, $state, $timeout, $rootScope, $mdSidena
 							$rootScope.accountData.miBalance = iota.utils.convertUnits($rootScope.accountData.balance, 'i', 'Mi');
 							localStorage.setItem('AccountData', JSON.stringify(msg.data.success));
 							localStorage.setItem('lastSync', new Date().getTime());
-							$state.reload();
+							if($rootScope.currentState === "layout.transfers") {
+								$state.reload();
+							}
 						}
 					};
 				}, 1);
@@ -49,7 +51,9 @@ function LayoutController($scope, $http, $state, $timeout, $rootScope, $mdSidena
 							$rootScope.accountData.miBalance = iota.utils.convertUnits($rootScope.accountData.balance, 'i', 'Mi');
 							localStorage.setItem('AccountData', JSON.stringify(msg.data.success));
 							localStorage.setItem('lastSync', new Date().getTime());
-							$state.reload();
+							if($rootScope.currentState === "layout.transfers") {
+								$state.reload();
+							}
 						}
 						myWorker.terminate();
 					};

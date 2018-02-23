@@ -1,12 +1,5 @@
 // var iota = new IOTA({'provider': 'http://node.lukaseder.de:14265'});
 var iota = new IOTA({'provider': 'https://node.iota-community.org'});
-iota.api.getNodeInfo(function(error, success) {
-	if (error) {
-		console.error('getNodeInfo error', error);
-	} else {
-		console.log('getNodeInfo success', success);
-	}
-});
 angular.module('templates', []);
 angular.module("wallet", [
 	'templates',
@@ -45,6 +38,7 @@ function config($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 			controller : SendController
 		})
 		.state('layout.transfers', {
+			cache: false,
 			url        : '/transfers',
 			templateUrl: 'transfers/transfers.html',
 			controller : TransfersController
@@ -86,4 +80,7 @@ function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog) {
 				.ok('OK')
 		);
 	};
+	document.addEventListener("backbutton", function () {
+		navigator.app.exitApp();
+	}, false);
 }

@@ -34,6 +34,7 @@ function ReceiveController($scope, $http, $state, $timeout, $rootScope) {
 					if (error) console.error(error);
 				});
 				$rootScope.loader(false);
+				$rootScope.loadWalletData();
 			}
 		};
 	};
