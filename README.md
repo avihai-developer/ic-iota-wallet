@@ -1,4 +1,6 @@
 # IC IOTA Wallet
+<img src="./google-play-store-listing/en-us/phone-1.png" width="200"/> <img src="./google-play-store-listing/en-us/phone-2.png" width="200"/> <img src="./google-play-store-listing/en-us/phone-3.png" width="200"/>
+
 # Download
 Android:
 
