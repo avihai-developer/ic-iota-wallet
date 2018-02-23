@@ -30,6 +30,10 @@ body {
     box-sizing: border-box; }
   body .transparent {
     background-color: transparent; }
+  body md-dialog {
+    background-color: #00695C !important; }
+    body md-dialog * {
+      color: white !important; }
 
 @-webkit-keyframes rotation {
   from {

@@ -17,10 +17,14 @@ function ReceiveController($scope, $http, $state, $timeout, $rootScope) {
 		myWorker.onmessage = function(msg) {
 			if (msg.data.error) {
 				console.log(msg.data.error);
-				if(msg.data.error === 'Request Error: inconsistent tips pair selected') {
-					$scope.createAddress();
-				} else {
-					$rootScope.loader(false);
+				switch(msg.data.error) {
+					case 'Request Error: inconsistent tips pair selected':
+						$scope.createAddress();
+						break;
+					default:
+						$rootScope.showPopup('Error, please try again.');
+						$rootScope.loader(false);
+						break;
 				}
 			} else {
 				console.log(msg.data.success);

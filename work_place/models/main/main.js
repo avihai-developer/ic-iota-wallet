@@ -52,8 +52,8 @@ function config($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 	;
 	$urlRouterProvider.otherwise('/login');
 }
-run.$inject = ['$rootScope', '$mdSidenav', '$state', '$timeout'];
-function run($rootScope, $mdSidenav, $state, $timeout) {
+run.$inject = ['$rootScope', '$mdSidenav', '$state', '$timeout', '$mdDialog'];
+function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog) {
 	$rootScope.toggleRight = buildToggler('left');
 	function buildToggler(componentId) {
 		return function() {
@@ -76,5 +76,14 @@ function run($rootScope, $mdSidenav, $state, $timeout) {
 		$timeout(function () {
 			$rootScope.showMiniLoader = show;
 		}, 1);
+	};
+
+	$rootScope.showPopup = function(text) {
+		$mdDialog.show(
+			$mdDialog.alert()
+				.parent(angular.element(document.querySelector('#popupContainer')))
+				.textContent(text)
+				.ok('OK')
+		);
 	};
 }

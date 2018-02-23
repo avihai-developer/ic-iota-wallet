@@ -1,6 +1,6 @@
 .page-inner-model.page-model-receive
 	.create-btn(ng-click='createAddress()')
 		.text Create new address
-	.address
+	.address(ng-show='address.id')
 		.id {{ address.id }}
 		canvas#address.qr-canvas

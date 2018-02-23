@@ -46,6 +46,12 @@ body {
 	.transparent {
 		background-color: transparent;
 	}
+	md-dialog {
+		background-color:  $color-primary !important;
+		* {
+			color: white !important;
+		}
+	}
 }
 
 @-webkit-keyframes rotation {

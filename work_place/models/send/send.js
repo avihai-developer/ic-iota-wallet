@@ -96,14 +96,23 @@ function SendController($scope, $http, $state, $timeout, $rootScope) {
 		myWorker.onmessage = function(msg) {
 			if (msg.data.error) {
 				console.log(msg.data.error);
-				if(msg.data.error === 'Request Error: inconsistent tips pair selected') {
-					$scope.send();
-				} else {
-					$rootScope.loader(false);
+				switch(msg.data.error) {
+					case 'Request Error: inconsistent tips pair selected':
+						$scope.send();
+						break;
+					case 'Not enough balance':
+						$rootScope.loader(false);
+						$rootScope.showPopup('Not enough balance.');
+						break;
+					default:
+						$rootScope.loader(false);
+						$rootScope.showPopup('Error, please try again.');
+						break;
 				}
 			} else {
 				console.log(msg.data.success);
 				$rootScope.loader(false);
+				$rootScope.showPopup('Your transaction has been sent successfully.');
 			}
 		};
 	}
