@@ -24,7 +24,7 @@ function LayoutController($scope, $http, $state, $timeout, $rootScope, $mdSidena
 						if (msg.data.error) {
 							console.error('getAccountData error', msg.data.error);
 						} else {
-							console.log('getAccountData success', msg.data.success);
+							msg.data.success = JSON.parse(msg.data.success).data;
 							$rootScope.accountData = msg.data.success;
 							$rootScope.accountData.miBalance = iota.utils.convertUnits($rootScope.accountData.balance, 'i', 'Mi');
 							localStorage.setItem('AccountData', JSON.stringify(msg.data.success));
@@ -46,7 +46,7 @@ function LayoutController($scope, $http, $state, $timeout, $rootScope, $mdSidena
 						if (msg.data.error) {
 							console.error('getAccountData error', msg.data.error);
 						} else {
-							console.log('getAccountData success', msg.data.success);
+							msg.data.success = JSON.parse(msg.data.success).data;
 							$rootScope.accountData = msg.data.success;
 							$rootScope.accountData.miBalance = iota.utils.convertUnits($rootScope.accountData.balance, 'i', 'Mi');
 							localStorage.setItem('AccountData', JSON.stringify(msg.data.success));
