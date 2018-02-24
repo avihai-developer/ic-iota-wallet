@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-iota"
+    version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name></name>
+    <js-module name="iota" src="www/iota.js">
+        <clobbers target="iotaNative" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="iota">
+                <param name="android-package" value="cordova.plugin.iota.iota" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/iota.java" target-dir="src/cordova-plugin-iota/iota" />
+        <framework custom="true" src="src/android/plugin.gradle" type="gradleReference" />
+        <!-- Permissions -->
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+    </platform>
+</plugin>

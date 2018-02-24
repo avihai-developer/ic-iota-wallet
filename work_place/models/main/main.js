@@ -83,4 +83,9 @@ function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog) {
 	document.addEventListener("backbutton", function () {
 		navigator.app.exitApp();
 	}, false);
+	document.addEventListener("deviceready", function () {
+		if(iotaNative) {
+			iotaNative.init();
+		}
+	}, false);
 }

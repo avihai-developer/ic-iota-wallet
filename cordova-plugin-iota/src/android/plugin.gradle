@@ -1,0 +1,6 @@
+repositories {
+	maven { url 'https://jitpack.io' }
+}
+dependencies {
+    compile 'com.github.iotaledger:iota~lib~java:0.9.10'
+}

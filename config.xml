@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.iota.community.wallet" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="org.iota.community.wallet" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>IC Wallet</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -45,6 +45,7 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-iota" spec="cordova-plugin-iota" />
     <engine name="android" spec="^7.0.0" />
     <engine name="ios" spec="4.5.4" />
 </widget>
