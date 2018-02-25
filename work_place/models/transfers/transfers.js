@@ -1,7 +1,7 @@
 angular.module('wallet.controllers').controller('TransfersController', TransfersController);
 TransfersController.$inject = ['$scope', '$http', '$state', '$timeout', '$rootScope'];
 function TransfersController($scope, $http, $state, $timeout, $rootScope) {
-	$rootScope.navTitle = 'Transfers';
+	$rootScope.navTitle = $rootScope.texts.menu.transfers;
 	$scope.md = {
 		transfers : '',
 		transfersView : [],

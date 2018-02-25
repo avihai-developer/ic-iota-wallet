@@ -1,7 +1,7 @@
 angular.module('wallet.controllers').controller('ReceiveController', ReceiveController);
 ReceiveController.$inject = ['$scope', '$http', '$state', '$timeout', '$rootScope'];
 function ReceiveController($scope, $http, $state, $timeout, $rootScope) {
-	$rootScope.navTitle = 'Receive';
+	$rootScope.navTitle = $rootScope.texts.menu.receive;
 	$scope.address = {
 		id: '',
 		date: ''
@@ -22,7 +22,7 @@ function ReceiveController($scope, $http, $state, $timeout, $rootScope) {
 						$scope.createAddress();
 						break;
 					default:
-						$rootScope.showPopup('Error, please try again.');
+						$rootScope.showPopup($rootScope.texts.errors.error_please_try_again);
 						$rootScope.loader(false);
 						break;
 				}

@@ -3,31 +3,31 @@
 		md-button.md-icon-button(aria-hidden='true', ng-click='toggleRight()')
 			i.fa.fa-bars(aria-hidden='true')
 		.nav-title {{navTitle}}
-		.balance Balance: {{accountData.miBalance}} Mi
+		.balance {{texts.header.balance}}: {{accountData.miBalance}} Mi
 		i.refresh.fa.fa-refresh(aria-hidden='true', ng-click='loadWalletData()')
 	md-sidenav.app-nav-menu.md-sidenav-left.md-whiteframe-4dp(md-component-id='left')
 		.header
 			img(src='./images/iota-logo.svg')
 		.menu-item(ng-click='selectMenu("layout.transfers")', ng-class='currentState === "layout.transfers" ? "active" : ""')
 			i.fa.fa-history(aria-hidden='true')
-			.text Transfers
+			.text {{ texts.menu.transfers }}
 		.menu-item(ng-click='selectMenu("layout.send")', ng-class='currentState === "layout.send" ? "active" : ""')
 			i.fa.fa-paper-plane(aria-hidden='true')
-			.text Send
+			.text {{ texts.menu.send }}
 		.menu-item(ng-click='selectMenu("layout.receive")', ng-class='currentState === "layout.receive" ? "active" : ""')
 			i.fa.fa-download(aria-hidden='true')
-			.text Receive
+			.text {{ texts.menu.receive }}
 		.menu-item.last(ng-click='logout()')
 			i.fa.fa-sign-out(aria-hidden='true')
-			.text Sign Out
+			.text {{ texts.menu.sign_out }}
 	ui-view.inner-view
 	.loader(ng-show='showLoader')
 		.img-box
 			img(src='./images/iota-logo.svg')
-			.text It's not stuck just slow
+			.text {{ texts.loading.not_stuck_just_slow }}
 	.mini-loader(ng-show='showMiniLoader')
 		img(src='./images/iota-logo.svg')
-		.text Sync wallet (It's not stuck)
+		.text {{ texts.loading.sync_not_stuck_just_slow }}
 	.qr
 		.header
 			.back(ng-click='toggleQR()')

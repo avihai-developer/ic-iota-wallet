@@ -1,7 +1,7 @@
 angular.module('wallet.controllers').controller('SendController', SendController);
 SendController.$inject = ['$scope', '$http', '$state', '$timeout', '$rootScope'];
 function SendController($scope, $http, $state, $timeout, $rootScope) {
-	$rootScope.navTitle = 'Send';
+	$rootScope.navTitle = $rootScope.texts.menu.send;
 	$scope.md = {
 		busy: false,
 		address: '',
@@ -41,7 +41,7 @@ function SendController($scope, $http, $state, $timeout, $rootScope) {
 			if (status.authorized) {
 				$timeout(function () {
 					$rootScope.toggleQR();
-					$rootScope.scanQrText = 'Scan Address';
+					$rootScope.scanQrText = $rootScope.texts.send.scan_address;
 					QRScanner.scan(function (err, text) {
 						$timeout(function () {
 							if(text.length === 90) {
@@ -102,17 +102,17 @@ function SendController($scope, $http, $state, $timeout, $rootScope) {
 						break;
 					case 'Not enough balance':
 						$rootScope.loader(false);
-						$rootScope.showPopup('Not enough balance.');
+						$rootScope.showPopup($rootScope.texts.errors.bot_enough_balance);
 						break;
 					default:
 						$rootScope.loader(false);
-						$rootScope.showPopup('Error, please try again.');
+						$rootScope.showPopup($rootScope.texts.errors.error_please_try_again);
 						break;
 				}
 			} else {
 				console.log(msg.data.success);
 				$rootScope.loader(false);
-				$rootScope.showPopup('Your transaction has been sent successfully.');
+				$rootScope.showPopup($rootScope.texts.send.your_transaction_has_been_sent_successfully);
 				$rootScope.loadWalletData();
 			}
 		};

@@ -1,14 +1,13 @@
 .page-inner-model.page-model-send
 	.address
-		.label Address
+		.label {{ texts.send.address }}
 		input(ng-model='md.address')
 		i.fa.fa-qrcode(aria-hidden='true', ng-click='scanAddress()')
 	.amount
-		.label Amount
+		.label {{ texts.send.amount }}
 		input(type='number', ng-model='md.amount')
 		.unit(ng-click='toggleUnits()') {{md.unit}}
 		.units
 			.opt(ng-repeat='unit in md.units', ng-click='md.unit = unit.key; toggleUnits();') {{unit.value}}
-		//select(ng-model='md.unit', ng-options='option for option in md.units')
 	.send-btn(ng-click='send()')
-		.text Send
+		.text {{ texts.send.send }}

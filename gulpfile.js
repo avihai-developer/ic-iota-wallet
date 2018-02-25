@@ -90,6 +90,8 @@ gulp.task('copy-and-compress-resources', ['delete-old-files'], function () {
 		.pipe(gulp.dest('./www/fonts/'));
 	gulp.src('./work_place/workers/**/**')
 		.pipe(gulp.dest('./www/workers/'));
+	gulp.src('./work_place/texts/**/**')
+		.pipe(gulp.dest('./www/texts/'));
 });
 gulp.task('build', ['copy-and-compress-resources'], function (cb) {
 	return gulpMultiProcess(['build-app'], cb, true);

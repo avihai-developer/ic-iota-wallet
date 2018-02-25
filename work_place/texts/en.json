@@ -1,0 +1,45 @@
+{
+  "general" : {
+    "ok" : "ok"
+  },
+  "login" : {
+    "seed" : "SEED",
+    "your_seed" : "Your seed",
+    "a_z_9" : "A-Z and the number 9",
+    "generate_new_seed" : "Generate new seed",
+    "about_seed" : "Think about your seed as the combined username and password that grants access to your bank account. If anyone obtains your seed, they can login and access your funds. If you lost your seed you lost your founds.",
+    "generate_manually" : "You can create new seed manually, just randomly press A-Z, 9.",
+    "scan_your_seed" : "Scan your seed"
+  },
+  "loading" : {
+    "not_stuck_just_slow" : "It's not stuck just slow",
+    "sync_not_stuck_just_slow" : "Sync wallet (It's not stuck)"
+  },
+  "header" : {
+    "balance" : "Balance"
+  },
+  "menu" : {
+    "transfers" : "Transfers",
+    "send" : "Send",
+    "receive" : "Receive",
+    "sign_out" : "Sign Out"
+  },
+  "transfers" : {
+    "no_transfers" : "No transfers",
+    "new_address" : "New Address"
+  },
+  "send" : {
+    "address" : "Address",
+    "amount" : "Amount",
+    "send" : "Send",
+    "your_transaction_has_been_sent_successfully" : "Your transaction has been sent successfully.",
+    "scan_address" : "Scan Address"
+  },
+  "receive" : {
+    "create_new_address" : "Create new address"
+  },
+  "errors" : {
+    "error_please_try_again" : "Error, please try again.",
+    "bot_enough_balance" : "Not enough balance."
+  }
+}

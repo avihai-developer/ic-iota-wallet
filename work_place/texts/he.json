@@ -1,0 +1,45 @@
+{
+  "general" : {
+    "ok" : "אישור"
+  },
+  "login" : {
+    "seed" : "זרע",
+    "your_seed" : "הזרע שלך",
+    "a_z_9" : "A-Z והמספר 9",
+    "generate_new_seed" : "ייצר זרע חדש",
+    "about_seed" : "תחשוב על הזרע שלך כמו שהוא השם משתמש והסיסמה שמאפשרים לך להיכנס לחשבון הבנק שלך. אם למישהו יש גישה לסיד שלך, הוא יוכל להתחבר ולהשמתמש במטבעות שלך. אם אתה תאבד את הסיד אתה תאבד את המטבעות שלך.",
+    "generate_manually" : "אתה יכול לייצר את הזרע שלך ידנית, רק תלחץ באקראיות על התתוים A-Z,9.",
+    "scan_your_seed" : "סרוק זרע"
+  },
+  "loading" : {
+    "not_stuck_just_slow" : "זה לא תקוע, זה רק איטי",
+    "sync_not_stuck_just_slow" : "טוען את הארנק (זה לא תקוע)"
+  },
+  "header" : {
+    "balance" : "יתרה"
+  },
+  "menu" : {
+    "transfers" : "העברות",
+    "send" : "שלח",
+    "receive" : "קבל",
+    "sign_out" : "התנתק"
+  },
+  "transfers" : {
+    "no_transfers" : "לא נמצאו העברות.",
+    "new_address" : "כתובת חדשה"
+  },
+  "send" : {
+    "address" : "כתובת",
+    "amount" : "כמות",
+    "send" : "שלח",
+    "your_transaction_has_been_sent_successfully" : "העברה נשלחה בהצלחה.",
+    "scan_address" : "סרוק כתובת"
+  },
+  "receive" : {
+    "create_new_address" : "צור כתובת חדשה"
+  },
+  "errors" : {
+    "error_please_try_again" : "שגיאה, בבקשה נסה שנית",
+    "bot_enough_balance" : "אין לך מספיק יתרה לביצוע ההעברה."
+  }
+}

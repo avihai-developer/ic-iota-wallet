@@ -1,19 +1,19 @@
 .page-model.page-model-login(ng-class='md.mode === "qr" ? "transparent" : ""')
 	.type(ng-show='md.mode === "type"')
-		.text SEED
+		.text {{ texts.login.seed }}
 		.seed-input
-			.label Your seed ({{md.seed.length}} / 81)
-			input(ng-model='md.seed', ng-change='onType()', placeholder='A-Z and the number 9', maxlength='81')
+			.label {{ texts.login.your_seed }} ({{md.seed.length}} / 81)
+			input(ng-model='md.seed', ng-change='onType()', placeholder='{{ texts.login.a_z_9 }}', maxlength='81')
 			i.fa.fa-qrcode(aria-hidden='true', ng-click='scan()')
 		.generate(ng-click="generateSeed()")
-			.generate-text Generate new seed
-		.about Think about your seed as the combined username and password that grants access to your bank account. If anyone obtains your seed, they can login and access your funds. If you lost your seed you lost your founds.
-		.generate-manualy You can create new seed manually, just randomly press A-Z, 9.
+			.generate-text {{ texts.login.generate_new_seed }}
+		.about {{ texts.login.about_seed }}
+		.generate-manualy {{ texts.login.generate_manually }}
 	.qr(ng-show='md.mode === "qr"')
 		.header
 			.back(ng-click='closeQrScan()')
 				i.fa.fa-arrow-left(aria-hidden='true')
-			.text Scan your seed
+			.text {{ texts.login.scan_your_seed }}
 		.scan-box
 		.close
 

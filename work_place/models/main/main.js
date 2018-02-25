@@ -46,8 +46,8 @@ function config($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 	;
 	$urlRouterProvider.otherwise('/login');
 }
-run.$inject = ['$rootScope', '$mdSidenav', '$state', '$timeout', '$mdDialog'];
-function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog) {
+run.$inject = ['$rootScope', '$mdSidenav', '$state', '$timeout', '$mdDialog', '$http'];
+function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog, $http) {
 	$rootScope.toggleRight = buildToggler('left');
 	function buildToggler(componentId) {
 		return function() {
@@ -77,15 +77,50 @@ function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog) {
 			$mdDialog.alert()
 				.parent(angular.element(document.querySelector('#popupContainer')))
 				.textContent(text)
-				.ok('OK')
+				.ok($rootScope.texts.general.ok)
 		);
 	};
 	document.addEventListener("backbutton", function () {
 		navigator.app.exitApp();
 	}, false);
 	document.addEventListener("deviceready", function () {
-		if(iotaNative) {
-			iotaNative.init();
-		}
+		if(iotaNative) iotaNative.init();
+		$http.get("./texts/en.json")
+			.then(function(result){
+				$timeout(function() {
+					$rootScope.texts = result.data;
+				}, 1);
+				if(navigator.globalization) {
+					navigator.globalization.getPreferredLanguage(
+						function(success) {
+							if(success && success.value) {
+								var lan = success.value.toLowerCase();
+								lan = lan.match(/.+?(?=-)/)[0] || lan;
+								switch(lan) {
+									case 'de':
+									case 'es':
+									case 'he':
+									case 'no':
+										$http.get("./texts/" + lan + ".json")
+											.then(function(result){
+												$timeout(function() {
+													$rootScope.texts = result.data;
+												}, 1);
+											})
+											.catch(function() {
+
+											});
+									break;
+								}
+							}
+						},
+						function(error) {
+						},
+					)
+				}
+			})
+			.catch(function(error) {
+			}
+		);
 	}, false);
 }
