@@ -101,6 +101,13 @@ function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog, $http) {
 									case 'es':
 									case 'he':
 									case 'no':
+									case 'ja':
+									case 'fr':
+									case 'ko':
+									case 'nl':
+									case 'hi':
+									case 'ar':
+									case 'ru':
 										$http.get("./texts/" + lan + ".json")
 											.then(function(result){
 												$timeout(function() {
