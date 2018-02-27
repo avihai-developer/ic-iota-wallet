@@ -23,7 +23,7 @@ function LoginController($scope, $http, $state, $timeout, $rootScope) {
 							if(text.length === 81) {
 								localStorage.setItem('seed', text);
 								$rootScope.seed = text;
-								$state.go('layout.transfers');
+								$state.go('layout.seed');
 							} else {
 								$timeout(function() {
 									$scope.md.mode = 'type';
@@ -52,7 +52,7 @@ function LoginController($scope, $http, $state, $timeout, $rootScope) {
 			$scope.md.seed = $scope.md.seed.toUpperCase();
 			localStorage.setItem('seed', $scope.md.seed);
 			$rootScope.seed = $scope.md.seed;
-			$state.go('layout.transfers');
+			$state.go('layout.seed');
 		}
 	};
 	$scope.generateSeed = function () {
@@ -69,6 +69,6 @@ function LoginController($scope, $http, $state, $timeout, $rootScope) {
 		}
 		localStorage.setItem('seed', final_seed);
 		$rootScope.seed = final_seed;
-		$state.go('layout.transfers');
+		$state.go('layout.seed');
 	};
 }

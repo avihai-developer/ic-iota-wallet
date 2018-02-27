@@ -38,6 +38,9 @@
   "receive" : {
     "create_new_address" : "צור כתובת חדשה"
   },
+  "seed" : {
+    "your_seed" : "הזרע שלך"
+  },
   "errors" : {
     "error_please_try_again" : "שגיאה, בבקשה נסה שנית",
     "bot_enough_balance" : "אין לך מספיק יתרה לביצוע ההעברה."

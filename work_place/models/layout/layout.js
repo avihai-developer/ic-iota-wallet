@@ -10,7 +10,7 @@ function LayoutController($scope, $http, $state, $timeout, $rootScope, $mdSidena
 		}
 	}, 1000);
 	$rootScope.loadWalletDataNative = function () {
-		if(iotaNative) {
+		if(typeof iotaNative !== 'undefined') {
 			// iotaNative.getAccountData($rootScope.seed, function (data) {
 			// 	var data = JSON.parse(data);
 			// 	console.log('data', data);

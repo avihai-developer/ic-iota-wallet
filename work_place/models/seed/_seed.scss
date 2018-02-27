@@ -1,0 +1,23 @@
+.page-model-seed {
+	padding: 16px;
+	.title {
+		text-align: center;
+		color: $color-primary;
+		font-weight: bold;
+	}
+	.seed {
+		color: $color-text;
+		word-break: break-all;
+		text-align: center;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+	canvas {
+		right: 0;
+		left: 0;
+		display: block;
+		margin: 0 auto;
+		min-width: 300px;
+		min-height: 300px;
+	}
+}

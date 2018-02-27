@@ -32,6 +32,11 @@ function config($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 			templateUrl: 'receive/receive.html',
 			controller : ReceiveController
 		})
+		.state('layout.seed', {
+			url        : '/seed',
+			templateUrl: 'seed/seed.html',
+			controller : SeedController
+		})
 		.state('layout.send', {
 			url        : '/send',
 			templateUrl: 'send/send.html',
@@ -83,6 +88,12 @@ function run($rootScope, $mdSidenav, $state, $timeout, $mdDialog, $http) {
 	document.addEventListener("backbutton", function () {
 		navigator.app.exitApp();
 	}, false);
+	$http.get("./texts/en.json")
+		.then(function(result){
+			$timeout(function() {
+				$rootScope.texts = result.data;
+			}, 1);
+		});
 	document.addEventListener("deviceready", function () {
 		if(iotaNative) iotaNative.init();
 		$http.get("./texts/en.json")

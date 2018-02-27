@@ -38,6 +38,9 @@
   "receive" : {
     "create_new_address" : "Create new address"
   },
+  "seed" : {
+    "your_seed" : "Your seed"
+  },
   "errors" : {
     "error_please_try_again" : "Error, please try again.",
     "bot_enough_balance" : "Not enough balance."
