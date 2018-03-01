@@ -4,45 +4,45 @@
   },
   "login" : {
     "seed" : "SEED",
-    "your_seed" : "Your seed",
-    "a_z_9" : "A-Z and the number 9",
-    "generate_new_seed" : "Generate new seed",
-    "about_seed" : "Think about your seed as the combined username and password that grants access to your bank account. If anyone obtains your seed, they can login and access your funds. If you lost your seed you lost your founds.",
-    "generate_manually" : "You can create new seed manually, just randomly press A-Z, 9.",
-    "scan_your_seed" : "Scan your seed"
+    "your_seed" : "Votre seed",
+    "a_z_9" : "A-Z et le chiffre 9",
+    "generate_new_seed" : "Générer une nouvelle seed",
+    "about_seed" : "Votre seed est l'équivalent d'un login et d'un mot de passe qui vous donne accès à votre compte. Si quelqu'un d'autre connait votre seed il pourra accéder à vos fonds. Si vous perdez votre seed vous perdez vos fonds.",
+    "generate_manually" : "Vous pouvez créer votre nouvelle seed manuellement, appuyez sur les touches A-Z et 9 au hasard",
+    "scan_your_seed" : "Scanner votre seed"
   },
   "loading" : {
-    "not_stuck_just_slow" : "It's not stuck just slow",
-    "sync_not_stuck_just_slow" : "Sync wallet (It's not stuck)"
+    "not_stuck_just_slow" : "Traitement en cours",
+    "sync_not_stuck_just_slow" : "Synchronisation du wallet (ce n'est pas planté)"
   },
   "header" : {
     "balance" : "Balance"
   },
   "menu" : {
     "transfers" : "Transfers",
-    "send" : "Send",
-    "receive" : "Receive",
-    "sign_out" : "Sign Out"
+    "send" : "Envoyer",
+    "receive" : "Recevoir",
+    "sign_out" : "Déconnexion"
   },
   "transfers" : {
-    "no_transfers" : "No transfers",
-    "new_address" : "New Address"
+    "no_transfers" : "Pas de transfers",
+    "new_address" : "Nouvelle Addresse"
   },
   "send" : {
-    "address" : "Address",
-    "amount" : "Amount",
-    "send" : "Send",
-    "your_transaction_has_been_sent_successfully" : "Your transaction has been sent successfully.",
-    "scan_address" : "Scan Address"
+    "address" : "Addresse",
+    "amount" : "Montant",
+    "send" : "Envoyer",
+    "your_transaction_has_been_sent_successfully" : "Envoi de la transaction réussi.",
+    "scan_address" : "Scanner une Adresse"
   },
   "receive" : {
-    "create_new_address" : "Create new address"
+    "create_new_address" : "Créer une nouvelle adresse"
   },
   "seed" : {
-    "your_seed" : "Your seed"
+    "your_seed" : "Votre seed"
   },
   "errors" : {
-    "error_please_try_again" : "Error, please try again.",
-    "bot_enough_balance" : "Not enough balance."
+    "error_please_try_again" : "Erreur, veuillez réessayer.",
+    "bot_enough_balance" : "Balance insuffisante"
   }
 }
