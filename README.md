@@ -39,10 +39,6 @@ Apple don't approve apps using the iota protocol for now.
 	$ cordova platform add osx
 	$ cordova run osx
 
-	Ubuntu:
-	$ cordova platform add ubuntu
-	$ cordova run ubuntu
-
 # TODO LIST
 https://wallet.iota-community.org/todo
 # Donate
